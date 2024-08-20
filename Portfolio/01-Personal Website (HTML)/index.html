@@ -112,18 +112,26 @@
             <li>How I Met Your Mother</li>
             <img src="./images/how.jpg" alt="(How I Met Your Mother Poster)" />
             <li>Dragon Ball Z</li>
-            <img id="MiImagen" src="./images/DBZ.jpeg" alt="(Click to Mondongo)" onclick="playSound()" style="cursor: pointer;"/>
+            <img id="MiImagen" src="DBZ.jpeg" alt="(Click to Mondongo)" onclick="playSound()" style="cursor: pointer;"/>
         </ol>
     </li>
     <audio id="Mondongo" src="goku-diciendo-mondongo.mp3"></audio>
     <script>
         function playSound() {
+            
+            var imagen= document.getElementById("MiImagen");
+            imagen.src = "DBZ.jpeg";
+            var imagenNueva=imagen.src = "mondongo.jpeg";
+            var imagenOriginal=imagen.src = "DBZ.jpeg";
+
             var sonido = document.getElementById("Mondongo");
             sonido.play();
-            
 
-            var imagen = document.getElementById("MiImagen");
-            imagen.src = "mondongo.jpeg";
+            imagen.src = imagenNueva;
+
+            setTimeout(function() {
+                imagen.src = imagenOriginal;
+            }, 1000);
         }
         
     </script>
