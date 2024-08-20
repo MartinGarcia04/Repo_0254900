@@ -35,15 +35,15 @@
         <li><b>Paidos</b><em>(2007-2010)</em></li>
         <img src="./images/Paidos.png" alt="(Paidos logo)" />    
         <li><b>Instituto Mexico de Toluca</b><em>(2010-2012)</em></li>
-        <img src="./images/IMT.png" alt="(Paidos logo)" />
+        <img src="./images/IMT.png" alt="(IMT logo)" />
         <li><b>Colegio Cervantes Primara</b><em>(2012-2016)</em></li>
-        <img src="./images/CCP.png" alt="(Paidos logo)" />
+        <img src="./images/CCP.png" alt="(CCP logo)" />
         <li><b>Colegio Cervantes Bosque</b><em>(2016-2019)</em></li>
-        <img src="./images/CCB.png" alt="(Paidos logo)" />
+        <img src="./images/CCB.png" alt="(CCB logo)" />
         <li><b>Colegio Cervantes Costa Rica</b><em>(2019-2022)</em></li>
-        <img src="./images/CCCR.png" alt="(Paidos logo)" />
+        <img src="./images/CCCR.png" alt="(CCCR logo)" />
         <li><b>Universidad Panamericana Campus Guadalajara</b><em>(2022-today)</em></li>
-        <img src="./images/UP.jpg" alt="(Paidos logo)" />
+        <img src="./images/UP.jpg" alt="(UP logo)" />
        </ul> 
 
     <hr/>
@@ -86,36 +86,47 @@
     <li>
         <ol>
             <li>Berserk</li>
-            <img src="./images/Berserk.jpg" alt="(Paidos logo)" />
+            <img src="./images/Berserk.jpg" alt="(Berserk Portrait)" />
             <li>El Brujo, Los secretos del inmortal, Nicolas Flammel</li>
-            <img src="./images/Brujo.jpg" alt="(Paidos logo)" />
+            <img src="./images/Brujo.jpg" alt="(El Brujo Portrait)" />
             <li>La Esfinge de Darwin</li>
-            <img src="./images/Darwin.jpeg" alt="(Paidos logo)" />
+            <img src="./images/Darwin.jpeg" alt="(La Esfinge Darwin Portrait)" />
         </ol>
     </li>
 
     <li><span><b>Movies</b></span>
         <ol>
             <li>Oppenheimer</li>
-            <img src="./images/Opi.jpg" alt="(Paidos logo)" />
+            <img src="./images/Opi.jpg" alt="(Oppenheimer Poster)" />
             <li>Spiderman 2(2004)</li>
-            <img src="./images/spider.jpg" alt="(Paidos logo)" />
+            <img src="./images/spider.jpg" alt="(Spiderman 2 Poster)" />
             <li>Grown Ups 2</li>
-            <img src="./images/Niños.jpg" alt="(Paidos logo)" />
+            <img src="./images/Niños.jpg" alt="(Grown Ups Poster)" />
         </ol>
     </li>
 
     <li><span><b>TV Shows</b></span>
         <ol>
             <li>Flash</li>
-            <img src="./images/flash.jpg" alt="(Paidos logo)" />
+            <img src="./images/flash.jpg" alt="(Flash Poster)" />
             <li>How I Met Your Mother</li>
-            <img src="./images/how.jpg" alt="(Paidos logo)" />
+            <img src="./images/how.jpg" alt="(How I Met Your Mother Poster)" />
             <li>Dragon Ball Z</li>
-            <img src="./images/DBZ.jpeg" alt="(Paidos logo)" />
+            <img id="MiImagen" src="./images/DBZ.jpeg" alt="(Click to Mondongo)" onclick="playSound()" style="cursor: pointer;"/>
         </ol>
     </li>
+    <audio id="Mondongo" src="goku-diciendo-mondongo.mp3"></audio>
+    <script>
+        function playSound() {
+            var sonido = document.getElementById("Mondongo");
+            sonido.play();
+            
 
+            var imagen = document.getElementById("MiImagen");
+            imagen.src = "mondongo.jpeg";
+        }
+        
+    </script>
     </ul>
 
     <h2>Cumpleaños Familia (Clasic Table)</h2>
