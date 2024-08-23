@@ -12,4 +12,33 @@ img{
     position:fixed;
     top:0px;
     right: 20px;
-}   
+}
+
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: auto;
+        }
+
+        .accordion {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .accordion img {
+            width: 20%; /* Cada imagen ocupa inicialmente el 20% del ancho */
+            height: 100%;
+            transition: width 1s ease-in-out;
+            cursor: pointer;
+            object-fit: cover; /* Mantiene la imagen bien proporcionada */
+        }
+
+        .accordion img.expanded {
+            width: 60%; /* La imagen sobre la que se hace hover ocupa el 60% del ancho */
+        }
+
+        .accordion img:not(.expanded) {
+            width: calc(40%/4); /* Las demás imágenes se distribuyen en el 40% restante */
+        }

@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Great Destinations</title>
+    <link href="./CSS/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
+    <div class="accordion">
+        <img src="./images/Japan.jpg" alt="JapanPhoto" class="expanded">
+        <img src="./images/norway.jpg" alt="NorwayPhoto">
+        <img src="./images/germany.jpg" alt="GermanyPhoto">
+        <img src="./images/iceland.jpg" alt="IcelandPhoto">
+        <img src="./images/italy.jpg" alt="ItalyPhoto">
+    </div>
 
+    <script>
+        const images = document.querySelectorAll('.accordion img');
+        let currentExpandedIndex = 0;
+
+        function setExpandedImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('expanded', i === index);
+            });
+            currentExpandedIndex = index;
+        }
+
+        // Inicializar la imagen expandida (por defecto la primera imagen)
+        setExpandedImage(currentExpandedIndex);
+
+        // Cambiar la imagen expandida al hacer hover
+        images.forEach((img, index) => {
+            img.addEventListener('mouseover', () => {
+                setExpandedImage(index);
+            });
+        });
+
+        // Mantener la imagen expandida cuando se mueve el mouse fuera del acordeón
+        document.querySelector('.accordion').addEventListener('mouseleave', () => {
+            setExpandedImage(currentExpandedIndex);
+        });
+    </script>
+    
     <a href="index.html">Back To HomePage</a>
     <br>
     <a href="#Japan">Japan</a>
@@ -18,9 +53,10 @@
     <a href="#Iceland">iceland</a>
     <br>
     <a href="#Italy">Italy</a>
-
     <br/>
+
     <hr>
+
     <h2 id="Japan"></h2>
     <h1>Japan</h1>
     <img src="./images/Japan.jpg" alt="Japan Photo" width="1600" height="800">
