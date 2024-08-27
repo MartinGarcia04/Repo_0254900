@@ -18,7 +18,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             overflow: auto;
-            background-color: rgb(119, 168, 90);
+            background-color: rgb(44, 44, 44);
             padding: 0;
             height: 100%;
         }
@@ -55,8 +55,8 @@
             top: 50%;
             left: 50%;
             font-size: 50px;
-            color: rgb(209, 52, 52);
-            text-shadow: 2px 2px 4px rgba(0,0,0,1);
+            color: rgb(190, 220, 112);
+            text-shadow: 4px 4px 8px rgb(221, 88, 119);
             writing-mode: vertical-rl;
             text-orientation:upright;
             z-index: -1;
