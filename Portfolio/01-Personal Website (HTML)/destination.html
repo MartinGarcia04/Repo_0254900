@@ -7,41 +7,15 @@
     <link href="./CSS/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <div class="accordion">
-        <img src="./images/Japan.jpg" alt="JapanPhoto" class="expanded">
-        <img src="./images/norway.jpg" alt="NorwayPhoto">
-        <img src="./images/germany.jpg" alt="GermanyPhoto">
-        <img src="./images/iceland.jpg" alt="IcelandPhoto">
-        <img src="./images/italy.jpg" alt="ItalyPhoto">
-    </div>
-
-    <script>
-        const images = document.querySelectorAll('.accordion img');
-        let currentExpandedIndex = 0;
-
-        function setExpandedImage(index) {
-            images.forEach((img, i) => {
-                img.classList.toggle('expanded', i === index);
-            });
-            currentExpandedIndex = index;
-        }
-
-        // Inicializar la imagen expandida (por defecto la primera imagen)
-        setExpandedImage(currentExpandedIndex);
-
-        // Cambiar la imagen expandida al hacer hover
-        images.forEach((img, index) => {
-            img.addEventListener('mouseover', () => {
-                setExpandedImage(index);
-            });
-        });
-
-        // Mantener la imagen expandida cuando se mueve el mouse fuera del acordeón
-        document.querySelector('.accordion').addEventListener('mouseleave', () => {
-            setExpandedImage(currentExpandedIndex);
-        });
-    </script>
-    
+        <div class="accordion">
+            <img src="./images/Japan.jpg" alt="JapanPhoto" >
+            <img src="./images/norway.jpg" alt="NorwayPhoto">
+            <img src="./images/germany.jpg" alt="GermanyPhoto">
+            <img src="./images/iceland.jpg" alt="IcelandPhoto">
+            <img src="./images/italy.jpg" alt="ItalyPhoto">
+            <h1>Destinations</h1>
+        </div>
+ 
     <a href="index.html">Back To HomePage</a>
     <br>
     <a href="#Japan">Japan</a>
@@ -125,8 +99,6 @@
         <li><b>Latitude & Longitude:</b> 41.8719° N, 12.5674° E</li>
     </ul>
     <img src="./images/italyfalg.png" alt="Norway Flag" width="200" height="150">
-
-    
 
 
 

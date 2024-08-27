@@ -18,6 +18,9 @@ body {
             margin: 0;
             font-family: Arial, sans-serif;
             overflow: auto;
+            background-color: rgb(119, 168, 90);
+            padding: 0;
+            height: 100%;
         }
 
         .accordion {
@@ -35,10 +38,23 @@ body {
             object-fit: cover; /* Mantiene la imagen bien proporcionada */
         }
 
-        .accordion img.expanded {
+        .accordion img:hover {
             width: 60%; /* La imagen sobre la que se hace hover ocupa el 60% del ancho */
         }
 
-        .accordion img:not(.expanded) {
+        .accordion img:not(:hover) {
             width: calc(40%/4); /* Las demás imágenes se distribuyen en el 40% restante */
+        }
+
+        .accordion h1{
+            position: static;
+            top: 50%;
+            left: 50%;
+            font-size: 50px;
+            color: rgb(209, 52, 52);
+            text-shadow: 2px 2px 4px rgba(0,0,0,1);
+            writing-mode: vertical-rl;
+            text-orientation:upright;
+            z-index: -1;
+            margin: 0;
         }
