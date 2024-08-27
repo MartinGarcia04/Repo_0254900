@@ -1,20 +1,20 @@
-img{
-    width: 20%;
-    height: 30%;
-}
+        img{
+            width: 20%;
+            height: 30%;
+        }
 
-#musicCheckbox{
-    position:fixed;
-    top: 0px;
-    right: 0px;
-}
-#MusicName{
-    position:fixed;
-    top:0px;
-    right: 20px;
-}
+        #musicCheckbox{
+            position:fixed;
+            top: 0px;
+            right: 0px;
+        }
+        #MusicName{
+            position:fixed;
+            top:0px;
+            right: 20px;
+        }
 
-body {
+        body {
             margin: 0;
             font-family: Arial, sans-serif;
             overflow: auto;
@@ -46,6 +46,10 @@ body {
             width: calc(40%/4); /* Las demás imágenes se distribuyen en el 40% restante */
         }
 
+        .accordion a{
+            display: contents;
+        }
+
         .accordion h1{
             position: static;
             top: 50%;
@@ -57,4 +61,30 @@ body {
             text-orientation:upright;
             z-index: -1;
             margin: 0;
+        }
+
+
+        .Flag{
+            width: 200px;
+            height: 150px;
+        }
+
+        .destiny{
+            width: 100%;
+        }
+
+        .butons{
+            display: inline-block;
+            padding: 10px 20px;
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            background-color: #007BFF; /* Color de fondo */
+            color: white; /* Color del texto */
+            text-align: center;
+            text-decoration: none; /* Quitar subrayado */
+            border-radius: 5px; /* Bordes redondeados */
+            font-size: 16px; /* Tamaño de la fuente */
+            transition: background-color 0.3s ease; /* Transición para cambio de color */
+            
         }
