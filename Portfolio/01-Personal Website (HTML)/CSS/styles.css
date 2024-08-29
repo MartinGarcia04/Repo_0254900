@@ -40,7 +40,7 @@
         }
         
         body::-webkit-scrollbar{
-            display: nones;
+            display: none;
         }
 
         .accordion {
@@ -119,4 +119,17 @@
             color: black; 
         }
 
+        .Places {
+            position: absolute;
+            left: 10%;
+            font-size: 150px;
+            text-align: center;
+            color:black;
+            text-decoration:overline;
+            transition: color 1.5s ease;
+            
+        }
 
+        .Places:hover{
+            color:white;
+        }
