@@ -133,3 +133,31 @@
         .Places:hover{
             color:white;
         }
+
+        .Table-img {
+            width: max-content;
+        }
+
+        .Agenda{
+            input[type="date"],
+            input[type="time"],
+            input[type="text"],
+            input[type="color"],
+            textarea,
+            select {
+            background-color: wheat; /* Color de fondo del campo */
+            color: #000000; /* Color del texto dentro del campo */
+            border: 1px solid #ccc;
+            padding: 8px;
+            width: 15%;
+            box-sizing: unset;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .schedule-btn{
+        background-color: wheat;
+        color: black;
+        cursor: pointer;
+    }

@@ -163,6 +163,8 @@
     </script>
     </ul>
 
+    <hr/>
+
     <h2>Family Birthdays (Clasic Table)</h2>
     <table border="5">
         <thead>
@@ -200,7 +202,7 @@
         </tfoot>
     </table>
 
-
+    <hr/>
     
 
     <h2>Agenda</h2>
@@ -209,7 +211,7 @@
         <input type="text" name="event" placeholder="Event" />
 
     </form>
-
+    <hr/>
     <script>
         // Function to control music playback
         function toggleMusic() {
@@ -230,12 +232,90 @@
         window.onload = toggleMusic;
     </script>
     
-    <a href="#">Inicio Página</a>
 
-    <table border="3">
+    <h2>Heroes/Writers/Musicians</h2>
+    <table border="5">
+        <thead>
+            <tr>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Date of birth/Date of dead</th>
+        <th>Profession</th>
+        <th>Some of their achievements or most famous work</th>
+        </tr>
+        </thead>
 
-
-        
+        <tbody>
+            <tr>
+                <td><img src="images/mozart.jpeg" alt="Mozart image" class="Table-img"></td>
+                <td>Wolfgang Amadeus Mozart</td>
+                <td>January 27, 1756 to December 5,1791</td>
+                <td>Musician</td>
+                <td>Mozart composed music in several genres, including opera and symphony. His most famous compositions included the motet Exsultate, Jubilate, K 165 (1773), 
+                    the operas The Marriage of Figaro (1786) and Don Giovanni (1787), and the Jupiter Symphony (1788). In all, Mozart composed more than 600 pieces of music</td>
+            </tr>
+            <tr>
+                <td><img src="images/shakespere.jpeg" alt="Shakespeare image" class="Table-img"></td>
+                <td>William Shakespeare</td>
+                <td> April 26,1565 to May 3, 1616</td>
+                <td>Poet</td>
+                <td>Although William Shakespeare was not blessed to live a long life.However throughout his short life, Shakespeare accomplished a lot things. He wrote 154 sonnets, 
+                    38 plays and 2 narratives. Romeo and Juliet, A Midsummer Nights Dream, Hamlet and Macbeth are amongst his most famous work.He wrote about issues that are apparent 
+                    in society which also include tragedies and comedies.</td>
+            </tr>
+            <tr>
+                <td><img src="images/martin jr.jpeg" alt="Martin Luther image" class="Table-img"></td>
+                <td>Martin Luther King</td>
+                <td> January 15, 1929 to April 4, 1968</td>
+                <td>Writer</td>
+                <td>Notable accomplishments from Dr. King included the first nonviolent bus boycott that lasted 382 days, leading the Supreme Court to declare segregation on busing 
+                    unconstitutional; the March on Washington, where he delivered his famous “I Have a Dream speech” and planned drives in Alabama for Black voter registration.</td>
+            </tr>
+        </tbody>
     </table>
+
+
+    <hr/>
+    <h2>Schedule</h2>
+    <div class="Agenda">
+    <form>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+        <hr>
+        <label for="time-start">Time Start:</label>
+        <input type="time" id="time-start" name="time-start">
+        
+        <label for="time-end">Time End:</label>
+        <input type="time" id="time-end" name="time-end">
+        <hr>
+        <label for="activity">Activity:</label>
+        <input type="text" id="activity" name="activity">
+        <hr>
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place">
+        <hr>
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+          <option value="school">School</option>
+          <option value="personal">Personal</option>
+          <option value="professional">Professional</option>
+          <option value="familiar">Familiar</option>
+          <option value="other">Other</option>
+        </select>
+        <hr>
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea>
+        <hr>
+        <label for="flag">Flag Color:</label>
+        <input type="color" id="flag" name="flag">
+        <hr>
+        <label for="free-busy">Free/Busy:</label>
+        <input type="checkbox" id="free-busy" name="free-busy"> Free
+        <hr>
+        <button type="submit" class="schedule-btn">Submit</button>
+      </form>
+      </div>
+
+      <hr/>
 </body>
 </html>
