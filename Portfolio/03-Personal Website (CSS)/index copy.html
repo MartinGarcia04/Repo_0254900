@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebPage</title>
+    <style>
+        /*Here you can put global style elements 
+        img{
+        with:400;
+        heigth:500;
+        }
+        */
+    </style>
+    <link href="./CSS/styles.css" type="text/css" rel="stylesheet"/>
+</head>
+
+
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="destination.html">My favorite Spots</a>
+    </div>
+    <br/>
+    <br/>
+    <form>
+        <label for="music" id="MusicName">Music</label>
+        <input type="checkbox" id="musicCheckbox" name="music" checked>
+    </form>
+
+    <audio id="backgroundMusic"src="Guts Theme Berserk.mp3" autoplay="true" loop="true"></audio>
+
+    <h1>Martín García Torres</h1>
+    <hr>
+    <p>
+        <b>Unemployed</b><br/>Paseo de los Robles Norte No.207,<i>45237</i>, Bonsai 8
+    </p>
+
+    <hr/>
+
+    <h3>Personal Description</h3>
+    <p>
+        Digital animation engineering Student, 5 Semester<br/>Born in the Estado de México<br/>Co Founder of Rumba Beat Studio
+    </p>
+        <blockquote>
+            "There are only two things infinite: the universe and human stupidity, and I'm not so sure about the first."--<b>Albert Einstein</b> 
+        </blockquote>
+
+    <hr/>
+
+    <h2>Background</h2>
+        <p>
+            Born from a humble family in the State of Mexico, always looking to live a happy and peaceful life where I can dedicate myself to what I like and what I am also passionate about.
+            to be able to share it with my loved ones and form a great family.
+        </p>
+    <hr/>
+
+    <h2>Education</h2>
+       <ul>
+        <li><b>Paidos</b><em>(2007-2010)</em></li>
+        <a href="https://pia.edu.mx" target="_blank"><img src="./images/Paidos.png" alt="(Paidos logo)"/></a>    
+        <li><b>Instituto Mexico de Toluca</b><em>(2010-2012)</em></li>
+        <a href="https://institutomexicotoluca.maristas.edu.mx" target="_blank"><img src="./images/IMT.png" alt="(IMT logo)"/></a>
+        <li><b>Colegio Cervantes Primara</b><em>(2012-2016)</em></li>
+        <a href="https://ccpgdl.edu.mx" target="_blank"><img src="./images/CCP.png" alt="(CCP logo)"/></a>
+        <li><b>Colegio Cervantes Bosque</b><em>(2016-2019)</em></li>
+        <a href="https://ccbosque.edu.mx" target="_blank"><img src="./images/CCB.png" alt="(CCB logo)"/></a>
+        <li><b>Colegio Cervantes Costa Rica</b><em>(2019-2022)</em></li>
+        <a href="https://cervantes.edu.mx" target="_blank"><img src="./images/CCCR.png" alt="(CCCR logo)"/></a>
+        <li><b>Universidad Panamericana Campus Guadalajara</b><em>(2022-today)</em></li>
+        <a href="https://www.up.edu.mx"target="_blank"><img src="./images/UP.jpg" alt="(UP logo)"/></a>
+       </ul> 
+
+    <hr/>
+
+    <h2>Skills</h2>
+    <ol type="I">
+        <li>Somelier (100%)</li>
+        <li>3D Modeling(60%)</li>
+        <li>Particle Simulaton(50%)</li>
+        <li>Cooking(48%)</li>
+        <li>C++(20%)</li>
+    </ol>
+
+    <hr/>
+
+    <h2>Hobbies</h2>
+
+    <h3> Favorite Food</h4>
+
+    <h4>TOP 5</h4>
+
+    <ol typr="1">
+       <li>Mexican</li>
+       <li>Italian</li> 
+       <li>Spain</li> 
+       <li>Jpanese</li> 
+       <li>Caribean</li> 
+    </ol>
+
+    <h4>BOTTOM 3</h4>
+    <ol start="98">
+        <li>French</li> 
+        <li>Arab</li> 
+        <li>Thai</li> 
+    </ol>
+
+    <h2>Books,Movies & TV Shows</h2>
+
+    <ul>
+    <li>
+        <ol>
+            <li>Berserk</li>
+            <img src="./images/Berserk.jpg" alt="(Berserk Portrait)"/>
+            <li>El Brujo, Los secretos del inmortal, Nicolas Flammel</li>
+            <img src="./images/Brujo.jpg" alt="(El Brujo Portrait)"/>
+            <li>La Esfinge de Darwin</li>
+            <img src="./images/Darwin.jpeg" alt="(La Esfinge Darwin Portrait)"/>
+        </ol>
+    </li>
+
+    <li><span><b>Movies</b></span>
+        <ol>
+            <li>Oppenheimer</li>
+            <img src="./images/Opi.jpg" alt="(Oppenheimer Poster)"/>
+            <li>Spiderman 2(2004)</li>
+            <img src="./images/spider.jpg" alt="(Spiderman 2 Poster)"/>
+            <li>Grown Ups 2</li>
+            <img src="./images/Niños.jpg" alt="(Grown Ups Poster)"/>
+        </ol>
+    </li>
+
+    <li><span><b>TV Shows</b></span>
+        <ol>
+            <li>Flash</li>
+            <img src="./images/flash.jpg" alt="(Flash Poster)"/>
+            <li>How I Met Your Mother</li>
+            <img src="./images/how.jpg" alt="(How I Met Your Mother Poster)" />
+            <li>Dragon Ball Z</li>
+            <img id="MiImagen" src="DBZ.jpeg" alt="(Click to Mondongo)" onclick="playSound()" style="cursor: pointer;"/>
+        </ol>
+    </li>
+    <audio id="Mondongo" src="goku-diciendo-mondongo.mp3"></audio>
+    <script>
+        function playSound() {
+            
+            var imagen= document.getElementById("MiImagen");
+            imagen.src = "DBZ.jpeg";
+            var imagenNueva=imagen.src = "mondongo.jpeg";
+            var imagenOriginal=imagen.src = "DBZ.jpeg";
+
+            var sonido = document.getElementById("Mondongo");
+            sonido.play();
+
+            imagen.src = imagenNueva;
+
+            setTimeout(function() {
+                imagen.src = imagenOriginal;
+            }, 1000);
+        }
+
+       
+    </script>
+    </ul>
+
+    <hr/>
+
+    <h2>Family Birthdays (Clasic Table)</h2>
+    <table border="5">
+        <thead>
+
+            <tr>
+                <th colspan="2">Full Name</th>
+                <th rowspan="2">Birthday</th>
+            </tr>
+
+            <tr>
+                <th>Name</th>
+                <th>Last Name</th>
+            </tr>
+
+        </thead>
+        
+        <tbody>
+
+        <tr>
+            <td>Mario</td>
+            <td>Garcia</td>
+            <td>5 December</td>
+        </tr>
+
+        <tr>
+            <td>Sofia</td>
+            <td>Garcia</td>
+            <td>1 June</td>
+        </tr>
+
+        </tbody>
+
+        <tfoot>
+           <caption><b>Birthday Table</b></caption>
+        </tfoot>
+    </table>
+
+    <hr/>
+    
+
+    <h2>Agenda</h2>
+    <form>
+        <label for="event">Event</label>
+        <input type="text" name="event" placeholder="Event" />
+
+    </form>
+    <hr/>
+    <script>
+        // Function to control music playback
+        function toggleMusic() {
+            var musicCheckbox = document.getElementById("musicCheckbox");
+            var audioElement = document.getElementById("backgroundMusic");
+
+            if (musicCheckbox.checked) {
+                audioElement.play();
+            } else {
+                audioElement.pause();
+            }
+        }
+
+        // Add event listener to the checkbox
+        document.getElementById("musicCheckbox").addEventListener("change", toggleMusic);
+
+        // Ensure the music is in the correct state on page load
+        window.onload = toggleMusic;
+    </script>
+    
+
+    <h2>Heroes/Writers/Musicians</h2>
+    <table border="5">
+        <thead>
+            <tr>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Date of birth/Date of dead</th>
+        <th>Profession</th>
+        <th>Some of their achievements or most famous work</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><img src="images/mozart.jpeg" alt="Mozart image" class="Table-img"></td>
+                <td>Wolfgang Amadeus Mozart</td>
+                <td>January 27, 1756 to December 5,1791</td>
+                <td>Musician</td>
+                <td>Mozart composed music in several genres, including opera and symphony. His most famous compositions included the motet Exsultate, Jubilate, K 165 (1773), 
+                    the operas The Marriage of Figaro (1786) and Don Giovanni (1787), and the Jupiter Symphony (1788). In all, Mozart composed more than 600 pieces of music</td>
+            </tr>
+            <tr>
+                <td><img src="images/shakespere.jpeg" alt="Shakespeare image" class="Table-img"></td>
+                <td>William Shakespeare</td>
+                <td> April 26,1565 to May 3, 1616</td>
+                <td>Poet</td>
+                <td>Although William Shakespeare was not blessed to live a long life.However throughout his short life, Shakespeare accomplished a lot things. He wrote 154 sonnets, 
+                    38 plays and 2 narratives. Romeo and Juliet, A Midsummer Nights Dream, Hamlet and Macbeth are amongst his most famous work.He wrote about issues that are apparent 
+                    in society which also include tragedies and comedies.</td>
+            </tr>
+            <tr>
+                <td><img src="images/martin jr.jpeg" alt="Martin Luther image" class="Table-img"></td>
+                <td>Martin Luther King</td>
+                <td> January 15, 1929 to April 4, 1968</td>
+                <td>Writer</td>
+                <td>Notable accomplishments from Dr. King included the first nonviolent bus boycott that lasted 382 days, leading the Supreme Court to declare segregation on busing 
+                    unconstitutional; the March on Washington, where he delivered his famous “I Have a Dream speech” and planned drives in Alabama for Black voter registration.</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr/>
+    <h2>Schedule</h2>
+    <div class="Agenda">
+    <form>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+        <hr>
+        <label for="time-start">Time Start:</label>
+        <input type="time" id="time-start" name="time-start">
+        
+        <label for="time-end">Time End:</label>
+        <input type="time" id="time-end" name="time-end">
+        <hr>
+        <label for="activity">Activity:</label>
+        <input type="text" id="activity" name="activity">
+        <hr>
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place">
+        <hr>
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+          <option value="school">School</option>
+          <option value="personal">Personal</option>
+          <option value="professional">Professional</option>
+          <option value="familiar">Familiar</option>
+          <option value="other">Other</option>
+        </select>
+        <hr>
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea>
+        <hr>
+        <label for="flag">Flag Color:</label>
+        <input type="color" id="flag" name="flag">
+        <hr>
+        <label for="free-busy">Free/Busy:</label>
+        <input type="checkbox" id="free-busy" name="free-busy"> Free
+        <hr>
+        <button type="submit" class="schedule-btn">Submit</button>
+      </form>
+      </div>
+
+      <hr/>
+</body>
+</html>
