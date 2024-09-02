@@ -5,15 +5,66 @@ body {
 *{
   text-align: center;
   color:wheat;
+  font-family: 'Merriweather', serif;
   
+}
+
+.Info h1{
+  font-family: 'Sacramento',cursive;
+  color:rgb(200, 252, 140);
+  font-size: 5.5rem;
+  margin: 50px;
+}
+
+.Info h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  padding-top: 10px;
+  color: rgb(245, 169, 150);
+}
+
+.Info h3{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(128, 202, 245);
+}
+
+.studies{
+  background-color: rgb(66, 64, 64);
+}
+
+.studies img{
+  width:100px ;
+  height: 100px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.skills{
+  background-color: rgb(39, 39, 39);
+}
+.Info hr{
+  border: none;
+  border-bottom: 6px dotted #EAF6F6;
+  background: transparent;
+  width: 4%;
+  margin: 100px,100px;
 }
 
 ul,ol{
   list-style-position: inside;
 }
 
+.hobbies{
+  background-color: rgb(53, 53, 53);
+}
 
+.tables{
+  background-color: rgb(27, 27, 27);
+}
 
+.schedule{
+  background-color: rgb(46, 46, 46);
+}
 img{
   width: 20%;
   height: 30%;
@@ -150,7 +201,7 @@ body::-webkit-scrollbar{
   select {
   background-color: wheat; /* Color de fondo del campo */
   color: #000000; /* Color del texto dentro del campo */
-  border: 1px solid #ccc;
+  border: 10px dotted rgb(121, 161, 159);
   padding: 8px;
   width: 15%;
   box-sizing: unset;
@@ -163,4 +214,62 @@ body::-webkit-scrollbar{
 background-color: wheat;
 color: black;
 cursor: pointer;
+}
+
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  background-color: #000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.row img{
+  height: 400px;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #646464;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
 }
