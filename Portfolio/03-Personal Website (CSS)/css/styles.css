@@ -6,6 +6,7 @@ body {
   text-align: center;
   color:wheat;
   font-family: 'Merriweather', serif;
+  z-index: 0;
   
 }
 
@@ -272,4 +273,28 @@ cursor: pointer;
 
 .button:hover {
   background-color: #555;
+}
+
+.mountain-cloud{
+  display:flex;
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+}
+
+.mountain-cloud .mountain{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  left: calc(100vh/2);
+  
+}
+
+.mountain-cloud .cloud{
+  position:sticky;
+  top: 10px;
+  
+  
 }
