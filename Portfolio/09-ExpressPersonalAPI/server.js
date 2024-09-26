@@ -7,6 +7,9 @@ app.use(express.static("public"));
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine","ejs");
 
+
+var names=[];
+
 app.route("/")
 .get((req,res)=>{
     res.render("index",{})
