@@ -9,14 +9,14 @@ In this exercise you need to implement at least one of each of these components
 - Accordion***
 - Buttons***
 - Button groups***
-- Card
+- Card***
 - Modal***
 - Pop over
 - Progress***
 - Spinner***
 - Tooltips***
-- Iconic link
-- Floating labels
+- Iconic link***
+- Floating labels***
 - Borders & background***
 
 The result of this exercise must behave in a responsive way, that means that it should look good in a screen or in a phone or tablet, so make sure that you use the proper elements to allow this to happen. These elements can be unrelated to each other and just in the same page in the vaccum; but I would suggest that you try to include these elements in your Personal Website project to improve its quality. Be aware that in the final version of the Personal Website your site will have to be responsive and look amazing!
@@ -27,7 +27,7 @@ Select 5 elements from the following list and make a small demo of how would you
 
 - Color mode
 - Navbar with search field***
-- Sticky footer
+- Sticky footer***
 - Collapsible sidebar
 - Drop downs with icon
 - Offcanvas content
