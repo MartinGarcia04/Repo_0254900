@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express test</title>
+    <title>Greeting Page</title>
 </head>
-
 <body>
-    <% if (locals.error) { %>
-        <h3>
-            <%= error %>
-        </h3>
-        <% } %>
-            <form action="/greet" method="get">
-                Register:
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="submit" value="go next">
-            </form>
+    <h1>Welcome!</h1>
+    <form action="/greet" method="GET">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Greet me!</button>
+    </form>
+
+    <% if (names.length > 0) { %>
+        <h2>Greetings</h2>
+        <ul>
+            <% names.forEach((name, index) => { %>
+                <li><a href="/greet/<%= index %>">Hi, <%= name %>!</a></li>
+            <% }) %>
+        </ul>
+    <% } %>
+
+    <% if (error) { %>
+        <p style="color:red"><%= error %></p>
+    <% } %>
+
+    <h2>TODO List</h2>
+    <ul>
+        <% tasks.forEach((task, index) => { %>
+            <li><%= task %>
+                <form action="/task/delete/<%= index %>" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+                <button>&uarr;</button>
+                <button>&darr;</button>
+            </li>
+        <% }) %>
+    </ul>
+
+    <form action="/task" method="POST">
+        <label for="task">New Task:</label>
+        <input type="text" id="task" name="task" required>
+        <button type="submit">Add Task</button>
+    </form>
 
 </body>
-
 </html>
