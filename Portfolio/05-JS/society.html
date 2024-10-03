@@ -15,18 +15,20 @@
     <p>This society simmulator will show you how bad actors in society can affect the general feeling of a society.
         <br />Introduce the required parameters and then see how it works out. The goal is to end up with a happy
         society. Try to find how many are the smallest amount of sad individuals can spoil a society.</p>
-    <div>
-        <label for="num" style="width:170px;">How many individuals?</label>
-        <input type="text" id="num" style="width:30px;" /> <br />
-        <label for="sad">How many sad individuals?</label>
-        <input type="text" id="sad" style="width:30px;" /> <br />
-        <button id="btn" onclick="startGame()">
-            Run simulation?</button>
-        <br />
-        <span id="happyIndividuals"></span> <br />
-        <span id="sadIndividuals"></span> <br />
-        <span id="timer"></span>
-    </div>
+<div>
+    <label for="totalIndividuals">Total Individuals:</label>
+    <input type="number" id="totalIndividuals" value="10">
+    <label for="sadIndividuals">Sad Individuals:</label>
+    <input type="number" id="sadIndividuals" value="3">
+    <button onclick="startGame()">Start Game</button>
+  </div>
+  
+  <p id="happyIndividuals">Happy: 0</p>
+  <p id="sadIndividuals">Sad: 0</p>
+  <p id="timer">Time: 0</p>
+  
+  <canvas id="gameCanvas"></canvas>
+  
 
 </body>
 
