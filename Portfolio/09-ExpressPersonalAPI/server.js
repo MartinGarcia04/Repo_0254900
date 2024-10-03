@@ -48,11 +48,9 @@ app.get('/task', (req, res) => {
 });
 
 
-app.post('/task/delete/:taskIndex', (req, res) => {
-    const taskIndex = parseInt(req.params.taskIndex);
-    if (taskIndex >= 0 && taskIndex < tasks.length) {
-        tasks.splice(taskIndex);
-    }
+app.post('/task/delete/:index', (req, res) => {
+    const index = req.params.index;
+    tasks.splice(index, 1);
     res.redirect('/');
 });
 
@@ -68,6 +66,28 @@ app.use((err, req, res, next) => {
     console.error(err.stack);  
     res.status(500).send("Internal Server Error: " + err.message);  
 });
+
+app.post('/task/move/up/:index', (req, res) => {
+    const index = parseInt(req.params.index);
+    if (index > 0) {
+        const taskToMove = tasks[index];
+        tasks.splice(index, 1); // Eliminar de la posición actual
+        tasks.splice(index - 1, 0, taskToMove); // Insertar en la nueva posición
+    }
+    res.redirect('/');
+});
+
+// Ruta para mover una tarea hacia abajo
+app.post('/task/move/down/:index', (req, res) => {
+    const index = parseInt(req.params.index);
+    if (index < tasks.length - 1) {
+        const taskToMove = tasks[index];
+        tasks.splice(index, 1); // Eliminar de la posición actual
+        tasks.splice(index + 1, 0, taskToMove); // Insertar en la nueva posición
+    }
+    res.redirect('/');
+});
+
 
 
 const PORT = process.env.PORT || 3000;

@@ -33,8 +33,12 @@
                 <form action="/task/delete/<%= index %>" method="post" style="display:inline;">
                     <button type="submit">Delete</button>
                 </form>
-                <button>&uarr;</button>
-                <button>&darr;</button>
+                <form action="/task/move/up/<%= index %>" method="post" style="display:inline;">
+                    <button type="submit">&uarr;</button>
+                </form>
+                <form action="/task/move/down/<%= index %>" method="post" style="display:inline;">
+                    <button type="submit">&darr;</button>
+                </form>
             </li>
         <% }) %>
     </ul>
