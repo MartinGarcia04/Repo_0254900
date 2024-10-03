@@ -1,3 +1,300 @@
+  body {
+  margin: 0;
+}
+        
+*{
+  text-align: center;
+  color:wheat;
+  font-family: 'Merriweather', serif;
+  z-index: 0;
+  
+}
+
+.Info h1{
+  font-family: 'Sacramento',cursive;
+  color:rgb(200, 252, 140);
+  font-size: 5.5rem;
+  margin: 50px;
+}
+
+.Info h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  padding-top: 10px;
+  color: rgb(245, 169, 150);
+}
+
+.Info h3{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(128, 202, 245);
+}
+
+.studies{
+  background-color: rgb(66, 64, 64);
+}
+
+.studies img{
+  width:100px ;
+  height: 100px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.skills{
+  background-color: rgb(39, 39, 39);
+}
+.Info hr{
+  border: none;
+  border-bottom: 6px dotted #EAF6F6;
+  background: transparent;
+  width: 4%;
+  margin: 100px,100px;
+}
+
+ul,ol{
+  list-style-position: inside;
+}
+
+.hobbies{
+  background-color: rgb(53, 53, 53);
+}
+
+.tables{
+  background-color: rgb(27, 27, 27);
+}
+
+.schedule{
+  background-color: rgb(46, 46, 46);
+}
+img{
+  width: 20%;
+  height: 30%;
+}
+
+#musicCheckbox{
+  position:fixed;
+  top: 10px;
+  right: 0px;
+  z-index: 2;
+}
+#MusicName{
+  position:fixed;
+  top:10px;
+  right: 20px;
+  z-index: 2;
+}
+
 body {
   margin: 0;
+  font-family:'Courier New', Courier, monospace;
+  overflow: scroll;
+  background-color: rgb(44, 44, 44);
+  padding: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.accordion {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.accordion img {
+  width: 20%; /* Cada imagen ocupa inicialmente el 20% del ancho */
+  height: 100%;
+  transition: width 1s ease-in-out;
+  cursor: pointer;
+  object-fit: cover; /* Mantiene la imagen bien proporcionada */
+}
+
+.accordion img:hover {
+  width: 60%; /* La imagen sobre la que se hace hover ocupa el 60% del ancho */
+}
+
+.accordion img:not(:hover) {
+  width: calc(40%/4); 
+}
+
+.accordion a{
+  display: contents;
+}
+
+.accordion h1{
+  position: static;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: wheat;
+  text-shadow: 4px 4px 8px rgb(110, 46, 61);
+  writing-mode: vertical-lr;
+  text-orientation:upright;
+  z-index: -1;
+  margin: 1;
+}
+
+
+.Flag{
+  width: 200px;
+  height: 150px;
+}
+
+.destiny{
+  width: 100%;
+  height: 100%;   
+}
+
+.navbar {
+  top: 0px;
+  position: fixed; 
+  width: 100%;
+  background-color:rgb(110, 46, 61);
+  overflow: hidden; 
+  z-index: 1; 
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: wheat; 
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none; 
+  font-size: 17px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #ddd; 
+  color: black; 
+}
+
+.Places {
+  position: absolute;
+  left: 10%;
+  font-size: 150px;
+  text-align: center;
+  color:black;
+  text-decoration:overline;
+  transition: color 1.5s ease;
+  
+}
+
+.Places:hover{
+  color:white;
+}
+
+.Table-img {
+  width: max-content;
+}
+
+.Agenda{
+  input[type="date"],
+  input[type="time"],
+  input[type="text"],
+  input[type="color"],
+  textarea,
+  select {
+  background-color: wheat; /* Color de fondo del campo */
+  color: #000000; /* Color del texto dentro del campo */
+  border: 10px dotted rgb(121, 161, 159);
+  padding: 8px;
+  width: 15%;
+  box-sizing: unset;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+}
+
+.schedule-btn{
+background-color: wheat;
+color: black;
+cursor: pointer;
+}
+
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  background-color: #000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.row img{
+  height: 400px;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #646464;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.mountain-cloud{
+  display:flex;
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+}
+
+.mountain-cloud .mountain{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  left: calc(100vh/2);
+  
+}
+
+.mountain-cloud .cloud{
+  position:sticky;
+  top: 10px;
+  
+  
 }
