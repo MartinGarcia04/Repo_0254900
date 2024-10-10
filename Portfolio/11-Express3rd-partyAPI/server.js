@@ -16,5 +16,5 @@ app.get("/",(req,res)=>{
 
 
 app.listen(7000,()=>{
-    console.log("Listen on port 3000");
+    console.log("Listen on port 7000");
 });
