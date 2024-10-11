@@ -13,14 +13,14 @@
     <img src="../images/StarLion.png" alt="lion brewery" />
     <h1>Welcome to my landing page</h1>
     <h2>GET</h2>
-    <form action="/loginh" method="GET">
+    <form action="/login" method="GET">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" />
         <input type="submit" />
     </form>
 
     <h2>POST</h2>
-    <form action="/loginhp" method="POST">
+    <form action="/login" method="POST">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" />
         <input type="submit" />
@@ -35,11 +35,20 @@
     </form>
 
     <h2>POST</h2>
-    <form action="/loginejsp" method="POST">
+    <form action="/loginejs" method="POST">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" />
         <input type="submit" />
     </form>
+
+    <br/>
+    <h2>Login for home</h2>
+    <form action="/loginh" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="Login (Home)"/>
+    </form>
+
 </body>
 
 </html>

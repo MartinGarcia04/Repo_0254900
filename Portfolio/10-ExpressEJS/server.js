@@ -16,7 +16,7 @@ const longContent =
 
 let posts = [
   {
-    title:"Test Post: lorem ipsum",
+    title:"Test Post",
     content:longContent
   }
 ];
@@ -26,24 +26,74 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/html/index.html");
 });
 
-app.get("/loginh",(req,res)=>{
+app.get("/login",(req,res)=>{
   name=req.query.name;
-  res.send(`Hello ${name}`);
+  const sec="GET";
+  res.send(`Hello ${name} your using ${sec} method`);
 });
 
-app.post("/loginhp",(req,res)=>{
+app.post("/login",(req,res)=>{
   name=req.body.name;
-  res.send(`Hello ${name}`);
+  const sec="POST";
+  res.send(`Hello ${name} your using ${sec} method`);
 });
 
 app.get("/loginejs",(req,res)=>{
-  name=req.query.name;
-  res.send(`Hello ${name}`);
+  name = req.query.name;
+  res.render("test", { name: name, security: "(GET)" });
 });
 
-app.post("/loginejsp",(req,res)=>{
+app.post("/loginejs",(req,res)=>{
+  name = req.body.name;
+  res.render("test",{name:name,security:"(POST)"});
+});
+
+app.post("/loginh",(req,res)=>{
   name=req.body.name;
-  res.send(`Hello ${name}`);
+  res.redirect("/home");
+});
+
+app.get("/home",(req,res)=>{
+  if(!name){
+    return res.redirect("/");
+  }
+  res.render("home",{name:name,posts:posts,security:"secure (POST)"});
+});
+
+//Metod addPost
+app.post("/addPost",(req,res)=>{
+  const {title,content}=req.body;
+  if(!title || !content){
+    return res.send(`<p>Title and content are required <a href="/home">Return</a></p>`)
+  }
+  posts.push({title,content});
+  res.redirect("/home");
+});
+
+//Metods of post
+app.get("/post/:id",(req,res)=>{
+  const post = posts[req.params.id];
+  res.render("post",{post, id:req.params.id,name:name});
+});
+// Edit post
+app.post("/editPost/:id",(req,res)=>{
+  const {title,content} = req.body;
+  const postID= req.params.id;
+
+  if(!title || !content){
+    return res.send(`<p>Title and content are required <a href='/post/"+postID+"'>Return</a></p>`)
+  }
+
+  posts[postID]={title,content};
+  res.redirect("/post/"+postID);
+  
+});
+
+//Delete post
+
+app.post("/deletePost/:id",(req,res)=>{
+  posts.splice(req.params.id,1)
+  res.redirect("/home")
 });
 
 app.listen(3000, (err) => {

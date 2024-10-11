@@ -1,5 +1,32 @@
 <%- include('partials/header') %>
 
+<p>You logged in using the <%= security %> method.</p>
 
+<ul>
+    <% if (!posts || posts.length === 0) { %>
+        <li>No posts available at the moment</li>
+    <% } else { %>
+        <% posts.forEach((post, index) => { %>
+            <li>
+                <h3><%= post.title %></h3>
+                <p><%= post.content.length > 100 ? post.content.substring(0, 100) + '...' : post.content %></p>
+                <a href="/post/<%= index %>">Read more</a>
+            </li>
+        <% }) %>
+    <% } %>
+</ul>
 
+<h3>Create a New Post</h3>
+<form action="/addPost" method="post">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+    </div>
+    <label for="content">Content:</label>
+    <div>
+        <textarea id="content" name="content" rows="8" cols="50" placeholder="Write your content here..." required></textarea>
+        <button type="submit">Add Post</button>
+    </div>
+    
+</form>
 <%- include('partials/footer') %>
