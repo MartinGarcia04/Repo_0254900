@@ -6,12 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <img src="../images/StarLion.png" alt="lion brewery" />
     <h1>Welcome to my landing page</h1>
-    <form>
+    <h2>GET</h2>
+    <form action="/loginh" method="GET">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" />
+    </form>
+
+    <h2>POST</h2>
+    <form action="/loginhp" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" />
+    </form>
+
+    <h1>EJS</h1>
+    <h2>GET</h2>
+    <form action="/loginejs" method="GET">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" />
+    </form>
+
+    <h2>POST</h2>
+    <form action="/loginejsp" method="POST">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" />
         <input type="submit" />
