@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+require('dotenv').config();
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -8,7 +10,7 @@ app.use(express.static("public"));
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
 
-const mongoUrl = "mongodb://127.0.0.1:27017/f1";
+const mongoUrl = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.n7qnh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Definition of a schema
@@ -54,7 +56,7 @@ let countries = [
 ];
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/html/index.html");
+  res.render("index");
 });
 
 app.listen(3000, (err) => {
