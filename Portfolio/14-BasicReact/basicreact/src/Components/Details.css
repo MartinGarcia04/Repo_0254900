@@ -1,0 +1,57 @@
+/* Contenedor principal de la sección de detalles del personaje */
+.character-details-container {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  /* Estilos para la tarjeta del personaje */
+  .character-card {
+    background-color: #343a40;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagen del personaje */
+  .character-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+  
+  /* Nombre del personaje */
+  .character-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9fa;
+  }
+  
+  /* Descripción del personaje */
+  .character-bio {
+    font-size: 1rem;
+    color: #ced4da;
+  }
+  
+  /* Colores según la afiliación */
+  .text-danger {
+    color: #dc3545 !important; /* Rojo para Sith y Empire */
+  }
+  
+  .text-primary {
+    color: #007bff !important; /* Azul para otros personajes */
+  }
+  
+  /* Aseguramos que el texto de la biografía se vea bien en todos los dispositivos */
+  .card-body p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  

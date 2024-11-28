@@ -1,0 +1,63 @@
+/* Estilos generales para la sección de comentarios */
+.comments-section {
+    background-color: #343a40;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título de la sección de comentarios */
+  .comments-section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Contenedor de la lista de comentarios */
+  .comments-list {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Estilo de cada comentario */
+  .comment {
+    background-color: #495057;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .comment strong {
+    font-size: 1.1rem;
+    color: #f8f9fa;
+  }
+  
+  /* Formulario de comentarios */
+  .comment-form {
+    margin-top: 20px;
+  }
+  
+  /* Estilo de los inputs */
+  .comment-input {
+    background-color: #495057;
+    color: white;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+  }
+  
+  .comment-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Estilo del botón de agregar comentario */
+  .comment-button {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .comment-button:hover {
+    background-color: #0056b3;
+  }
+  
